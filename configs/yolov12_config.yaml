@@ -1,0 +1,46 @@
+# YOLO12l Configuration
+# For cricket player detection
+
+# Model architecture
+model: yolo12x.pt  # YOLO-World v2 Large
+task: detect
+mode: predict
+
+# Input settings
+imgsz: 1920  # Input image size
+conf: 0.1  # Confidence threshold
+iou: 0.9  # IoU threshold for NMS
+
+roi_ratio: 0.6  # (float) Ratio of image height to define ROI for player detection
+min_area_ratio: 0.0015  # (float) Minimum area ratio of dete
+
+# Detection settings
+classes: [0]  # Only detect persons (COCO class 0)
+max_det: 50   # Maximum detections per image
+agnostic_nms: False
+
+# Tracking settings (when used with track mode)
+tracker: configs/botsort.yaml  # Default tracker
+persist: True          # Persist tracks between frames
+
+# Optimization settings
+device: cuda  # cuda device, i.e. 0 or 0,1,2,3 or cpu
+half: False  # Use FP16 half-precision inference
+dnn: False  # Use OpenCV DNN for ONNX inference
+
+# Visualization settings
+line_width: 1  # Bounding box thickness (pixels)
+show_labels: False  # Show labels
+# show_labels: True # (bool) draw class labels on images, e.g. 'person'
+
+show_conf: False    # Show confidence scores
+show_boxes: False   # Show bounding boxes
+
+# Save settings
+save: False  # Save predictions
+save_txt: False  # Save results as .txt
+save_conf: False  # Save results with confidence scores
+save_crop: False  # Save cropped prediction boxes
+
+# Export settings
+format: torchscript  # Export format
