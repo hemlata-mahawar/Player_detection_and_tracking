@@ -22,8 +22,8 @@ In addition to core detection and tracking, the system includes  advanced analyt
 
 ## 1. Clone the repository
 ```bash
-git clone https://github.com/23f1001797/cricket_player_detection_and_top_view_implementation.git
-cd cricket_player_detection_and_top_view_implementation
+git clone https://github.com/23f1001797/Player_detection_n_tracking.git
+cd Player_detection_n_tracking
 ```
 ## Installation
 
